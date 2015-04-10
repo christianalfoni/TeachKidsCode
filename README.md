@@ -60,3 +60,15 @@ var someCode = 'foo';
 var someOtherCode = 'bar';
 // === SOME SECTION END ===
 ```
+### Methods
+Use the new ES6 syntax with paranthesis attached to method name.
+```js
+var methods = {
+  method1() {
+
+  },
+  method2() {
+
+  }
+};
+```

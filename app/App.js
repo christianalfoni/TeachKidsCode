@@ -1,18 +1,24 @@
 import React from 'react';
+import Toolbar from './components/Toolbar.js';
+import {
+  Grid,
+  Row,
+  Col
+} from 'react-bootstrap';
+
 
 var App = React.createClass({
   render: function () {
     return (
-      <div className="navbar-wrapper">
-        <div className="container">
-          <nav className="navbar navbar-inverse navbar-static-top">
-            <div className="container">
-              <div className="navbar-header">
-                <a className="navbar-brand" href="#">TeachKidsCode</a>
-              </div>
-            </div>
-          </nav>
-        </div>
+      <div>
+        <Toolbar/>
+      <Grid>
+        <Row className='show-grid'>
+          <Col md={12}>
+
+          </Col>
+        </Row>
+      </Grid>
       </div>
     ); 
   }
