@@ -1,8 +1,9 @@
-var config = require('./../config.js');
-var httpProxy = require('http-proxy');
-var configureWorkflow = require('./configureWorkflow.js');
-
 module.exports = function (app) {
+
+  // Require only if this method runs
+  var config = require('./../config.js');
+  var httpProxy = require('http-proxy');
+  var configureWorkflow = require('./configureWorkflow.js');
 
   // === WORKFLOW ===
   configureWorkflow();

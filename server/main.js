@@ -2,15 +2,17 @@ var express = require('express');
 var path = require('path');
 var app = express();
 var config = require('./../config.js');
+var configureProduction = require('./configureProduction.js');
+var configureDevelopment = require('./configureDevelopment.js');
 
 app.use(express.static(config.publicPath));
 
 // Require inline to avoid loading dependencies not needed in
 // production
 if (config.isProduction) {
-  require('./configureProduction.js')(app);
+  configureProduction(app);
 } else {
-  require('./configureDevelopment.js')(app);
+  configureDevelopment(app);
 }
 
 app.listen(config.port, function () {
