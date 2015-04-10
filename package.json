@@ -2,6 +2,9 @@
   "name": "TeachKidsCode",
   "version": "0.1.0",
   "description": "An open source service for learning code",
+  "engines": {
+    "node": "0.12.x"
+  },
   "scripts": {
     "start": "node server/main.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js --colors --progress --display-error-details",
