@@ -1,4 +1,4 @@
-var config = require('./config.js');
+var config = require('./../config.js');
 var httpProxy = require('http-proxy');
 var configureWorkflow = require('./configureWorkflow.js');
 

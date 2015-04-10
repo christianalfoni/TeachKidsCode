@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-var config = require('./config.js');
+var config = require('./../config.js');
 
 app.use(express.static(config.publicPath));
 
