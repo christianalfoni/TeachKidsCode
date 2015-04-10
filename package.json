@@ -4,6 +4,7 @@
   "description": "An open source service for learning code",
   "scripts": {
     "start": "node server/main.js",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js --colors --progress --display-error-details",
     "test": "npm test"
   },
   "repository": {
