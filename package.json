@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node server/main.js",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js --colors --progress --display-error-details",
+    "postinstall": "node herokuDeploy.js",
     "test": "npm test"
   },
   "repository": {
