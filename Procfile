@@ -1,2 +1,1 @@
-web:npm run deploy
-web:npm start
+web:npm run deploy && npm start
