@@ -34,7 +34,7 @@ The last scene type, compiled language with terminal, is especially exciting. By
 - MaxCDN is used to cache audio recordings in production
 
 ## Development process
-The application will be running on Heroku. It will automatically be deployed via codeship to Heroku when tests pass. The project itself can be fully simulated locally. To run the development workflow simply run `npm start` in the terminal. This launches the project, connects to your local MongoDB and optionally the Redis instance. It has automatic rebuilds and ES6 syntax support.
+The application will be running on Heroku, later Nodejitsu when they have moved to GoDaddy. It will automatically be deployed via codeship to Heroku when pushing to repo and tests pass. The project itself can be fully simulated locally. To run the development workflow simply run `npm start` in the terminal. This launches the project, connects to your local MongoDB and optionally the Redis instance. It has automatic rebuilds and ES6 syntax support.
 
 ## Development requirements
 - Node JS v0.12

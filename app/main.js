@@ -1,9 +1,10 @@
-import React from 'react';
+import './../styles/bootstrap.css';
+import './../styles/bootstrap-theme.css';
+import './../styles/custom.css';
 
-var App = React.createClass({
-  render: function () {
-    return <h1>Hello TeachKidsCode!</h1>;
-  }
-});
+import React from 'react';
+import App from './App.js';
+
+
 
 React.render(<App/>, document.body);

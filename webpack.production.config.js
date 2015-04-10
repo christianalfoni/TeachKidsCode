@@ -15,6 +15,9 @@ var webpackConfig = {
     }, {
       test: /\.css$/,
       loader: 'style!css'
+    }, {
+      test: /\.woff$/,
+      loader: 'url?limit=99999999999'
     }]
   },
   plugins: [new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')]
