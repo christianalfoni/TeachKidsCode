@@ -14,7 +14,7 @@ var common = {
 };
 
 var production = {
-  port: 5000
+  port: process.env.PORT
 };
 
 var development = {
