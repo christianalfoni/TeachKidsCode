@@ -1,6 +1,8 @@
 # TeachKidsCode
 An open source service for learning code
 
+https://codeship.com/projects/TeachKidsCode/status?branch=master
+
 ## The tech prototype
 The prototype of the technology that will be used is located at [www.jsfridge.com](http://www.jsfridge.com). The technology allows synced recording of voice and interaction in the browser. The main feature of the prototype implementation is html/css/javascript and a "mini-browser". It basically is an IDE that allows you to record voice and interactions.
 
