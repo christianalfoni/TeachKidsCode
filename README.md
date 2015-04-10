@@ -3,6 +3,8 @@ An open source service for learning code
 
 https://codeship.com/projects/TeachKidsCode/status?branch=master
 
+Latest version can be found at: [teachkidscode.herokuapp.com/](http://teachkidscode.herokuapp.com/).
+
 ## The tech prototype
 The prototype of the technology that will be used is located at [www.jsfridge.com](http://www.jsfridge.com). The technology allows synced recording of voice and interaction in the browser. The main feature of the prototype implementation is html/css/javascript and a "mini-browser". It basically is an IDE that allows you to record voice and interactions.
 
@@ -60,7 +62,7 @@ var someCode = 'foo';
 var someOtherCode = 'bar';
 // === SOME SECTION END ===
 ```
-### Methods
+#### Methods
 Use the new ES6 syntax with paranthesis attached to method name.
 ```js
 var methods = {
@@ -71,4 +73,13 @@ var methods = {
 
   }
 };
+```
+#### React Bootstrap
+Always import components from React Bootstrap with the following syntax.
+```js
+import {
+  Input,
+  Row,
+  Col
+} from 'react-boostrap';
 ```
