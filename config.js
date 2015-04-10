@@ -14,7 +14,7 @@ var common = {
 };
 
 var production = {
-  port: 3000
+  port: 80
 };
 
 var development = {
