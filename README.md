@@ -2,7 +2,7 @@
 An open source service for learning code
 
 ## The tech prototype
-The prototype for the technology that will be used is located at [www.jsfridge.com](http://www.jsfridge.com). The technology allows synced recording of voice and interaction in the browser. The prototype feature of this implementation is html/css/javascript and a "mini-browser". It it basically an IDE that allows you to record voice and interactions.
+The prototype of the technology that will be used is located at [www.jsfridge.com](http://www.jsfridge.com). The technology allows synced recording of voice and interaction in the browser. The main feature of the prototype implementation is html/css/javascript and a "mini-browser". It basically is an IDE that allows you to record voice and interactions.
 
 ## The concept
 The TeachKidsCode project will be a framework for creating courses. The framework will consist of:
@@ -16,10 +16,10 @@ These features will allow the project to implement different types of scenes tha
 
 - Markdown to text
 - html/css/javascript with minibrowser
-- Presentation
+- Slides
 - Compiled language to javascript and terminal
 
-The last scene type, compiled language with terminal, is especially exciting. By [compiling a language](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS) to JavaScript we are able to run the code in the browser and display the result in a terminal.
+The last scene type, compiled language with terminal, is especially exciting. By [compiling a language](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS) to JavaScript we are able to run the code in the browser and display the result in a terminal component.
 
 ## Application stack
 - Webpack with Babel-loader for ES6 and JSX support
@@ -27,17 +27,17 @@ The last scene type, compiled language with terminal, is especially exciting. By
 - React-Bootstrap as component system
 - A custom combination of recorder.js and libmp3lame.js is used to record audio and convert to mp3 in the client before uploading to server
 - Node JS backend
-- Redis DB for session storage
+- Redis for session storage
 - MongoDB for audio and course storage
 - MaxCDN is used to cache audio recordings in production
 
 ## Development process
-The application will be running on Heroku at any time. It will automatically be deployed via codeship to Heroku when tests pass. The project itself can be fully simulated locally. To run the development workflow simply run `npm start` in the terminal. This launches the project, connects to your local MongoDB and optionally RedisDB instance. It has automatic rebuilds and ES6 syntax support.
+The application will be running on Heroku at any time. It will automatically be deployed via codeship to Heroku when tests pass. The project itself can be fully simulated locally. To run the development workflow simply run `npm start` in the terminal. This launches the project, connects to your local MongoDB and optionally Redis instance. It has automatic rebuilds and ES6 syntax support.
 
 ## Development requirements
 - Node JS v0.12
 - MongoDB
-- RedisDB (optional)
+- Redis (optional)
 
 ## Styleguide
 #### Comments
