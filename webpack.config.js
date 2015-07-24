@@ -3,8 +3,7 @@ var config = require('./config');
 
 var webpackConfig = {
   entry: {
-    app: ['webpack/hot/dev-server', 'webpack-dev-server/client?http://localhost:3030', config.appEntryPath],
-    vendors: config.vendors
+    app: ['webpack-dev-server/client?http://localhost:3030', config.appEntryPath],
   },
   context: config.appPath,
   devtool: 'eval',
@@ -16,20 +15,19 @@ var webpackConfig = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['babel?optional=es7.decorators'],
       exclude: [config.nodeModulesPath]
     }, {
       test: /\.css$/,
       loader: 'style!css'
     }, {
+      test: /\.json$/,
+      loader: 'json'
+    }, {
       test: /\.woff$/,
       loader: 'url?limit=99999999999'
     }]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  }
 };
 
 module.exports = webpackConfig;

@@ -1,19 +1,23 @@
 import React from 'react';
-import actions from './../actions.js';
-import CreateNewCourseLink from './toolbar/CreateNewCourseLink.js';
+import {Mixin} from 'cerebral-react-immutable-store';
 import {
   Navbar,
-  Nav
+  Nav,
+  NavItem
 } from 'react-bootstrap';
 
 var Toolbar = React.createClass({
-  render: function () {
+  mixins: [Mixin],
+  render() {
     return (
-      <Navbar brand='React-Bootstrap' inverse toggleNavKey={0}>
-        <Nav right eventKey={0}>
-          <CreateNewCourseLink/>
-        </Nav>
-      </Navbar>
+      <div style={{position: 'absolute', top: 0, width: '100%'}}>
+        <Navbar brand='LærKidsaKode' inverse>
+          <Nav eventKey={0}>
+            <NavItem eventKey={1} onClick={() => this.signals.createFileClicked()}>Create file</NavItem>
+            <NavItem eventKey={1} onClick={() => this.signals.openFileClicked()}>Open file</NavItem>
+          </Nav>
+        </Navbar>
+      </div>
     );
   }
 });

@@ -10,8 +10,11 @@ var webpackConfig = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['babel?optional=es7.decorators'],
       exclude: [config.nodeModulesPath]
+    }, {
+      test: /\.json$/,
+      loader: 'json'
     }, {
       test: /\.css$/,
       loader: 'style!css'
@@ -19,8 +22,7 @@ var webpackConfig = {
       test: /\.woff$/,
       loader: 'url?limit=99999999999'
     }]
-  },
-  plugins: [new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')]
+  }
 };
 
 module.exports = webpackConfig;

@@ -1,26 +1,28 @@
 import React from 'react';
 import Toolbar from './components/Toolbar.js';
+import Editor from './components/Editor.js';
+import Files from './components/files.js';
+import {Mixin} from 'cerebral-react-immutable-store';
 import {
-  Grid,
-  Row,
-  Col
+  Grid
 } from 'react-bootstrap';
 
-
 var App = React.createClass({
-  render: function () {
+  mixins: [Mixin],
+  getStatePaths() {
+    return {
+      view: ['view']
+    };
+  },
+  render() {
     return (
-      <div>
+      <div style={{height: '100%', paddingTop: 72}}>
         <Toolbar/>
-      <Grid>
-        <Row className='show-grid'>
-          <Col md={12}>
-
-          </Col>
-        </Row>
-      </Grid>
+        <Grid style={{height: 'calc(100% - 10px)'}}>
+          {this.state.view === 'editor' ? <Editor/> : <Files/>}
+        </Grid>
       </div>
-    ); 
+    );
   }
 });
 
